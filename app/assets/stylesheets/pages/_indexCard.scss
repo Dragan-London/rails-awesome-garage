@@ -1,0 +1,93 @@
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexy {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.card-trip-infos {
+  ul {
+    list-style: none;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -38px;
+}
+
+.card-trip img {
+  width: 120px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comments{
+  padding: 10px 20px;
+}
+
+
+  .trash {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 5px;
+    .btn-delete {
+      color: rgb(16, 45, 231);
+      i {
+        color: lightgray;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+}
+
+.card-car {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+
+}
+
+.card-car img {
+  width: 100%;
+  height: 300px;
+  margin: 5px 0;
+  object-fit: cover;
+}
+
+.margins-car {
+  width: 500px;
+  margin: 0 auto;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.card-car-comments {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.card-car-infos {
+  padding: 0 5px;
+}
+
+.owner {
+  background-color: red;
+  padding: 5px 8px;
+  border-radius: 15%;
+  margin-top: -20px;
+  color: white;
+  height: fit-content;
+
+}

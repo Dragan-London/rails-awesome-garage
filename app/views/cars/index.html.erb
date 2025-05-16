@@ -1,0 +1,31 @@
+<br>
+<div class= "margins-car">
+  <% @cars.each do |car| %>
+
+  <%= link_to car_path(car) do%>
+    <div class="card-car">
+      <div class="card-car-infos">
+        <div>
+          <h2><%= car.brand %></h2>
+          <h3><%= car.model %></h3>
+          <p><%= car.created_at.strftime("%e %b %Y %H:%M:%S%p") %></p>
+        </div>
+      </div>
+
+      <%= image_tag car.image_url %>
+
+      <div class="card-car-comments">
+        <div>
+          <% car.reviews.each do |review| %>
+            <p><%= review.comment %></p>
+            <p><%= '⭐️' * review.rating %></p>
+          <% end %>
+        </div>
+        <div class="owner">
+          <span><%= car.owner.nickname %></span>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>

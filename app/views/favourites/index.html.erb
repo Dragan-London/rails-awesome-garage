@@ -1,0 +1,26 @@
+
+<div class= "margins">
+  <br>
+  <h3>My Garage</h3>
+
+  <% @favourites.each do |favourite| %>
+    <div class="card-trip">
+
+      <%= image_tag favourite.car.image_url %>
+
+      <div class="card-trip-infos">
+        <ul>
+          <li><%= favourite.car.brand %> | <%= favourite.car.model %></li>
+        </ul>
+      </div>
+
+      <div class="trash">
+        <%= link_to favourite_path(favourite), data: {turbo_method: :delete, turbo_confirm: "Are you Sure, you want to delete?"},
+        class: 'btn-delete' do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+      </div>
+
+    </div>
+  <% end %>
+</div>
